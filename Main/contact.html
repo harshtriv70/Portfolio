@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contactstyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar"> 
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home </a></li>
+                    <li><a href="skills.html">My Skills</a></li>
+                    <!-- <li><a href="services.html">Services</a></li> -->
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main maincontact">
+            <div class="contactform">
+                <h1 class="contact-heading">Get in Touch</h1>
+                <p class="contact-subheading">Feel free to reach out for collaborations or just a friendly hello! 🚀</p>
+                <form action="https://formspree.io/f/movvbgjb" method="POST">
+                    <div class="input-group">
+                        <label for="clientemail" class="form-label">Email Address</label>
+                        <input type="email" name="clientemail" class="form-control" id="clientemail"
+                            placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="clientphone" class="form-label">Phone Number</label>
+                        <input type="tel" name="clientphone" class="form-control" id="clientphone"
+                            placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="clientmessage" class="form-label">Message</label>
+                        <textarea name="clientmessage" class="form-control" id="clientmessage"
+                            placeholder="Write your message..." rows="4" required></textarea>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="isclient" class="form-check-input" id="isclient">
+                        <label class="form-check-label" for="isclient">I want to work on a project with you</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

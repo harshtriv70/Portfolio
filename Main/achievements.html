@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Your main CSS (NavBar & other elements) -->
+    <link rel="stylesheet" href="achstyle.css"> <!-- Achievements Page CSS -->
+    /* JavaScript Required for Correct Navigation */
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let certificates = document.querySelectorAll(".certificate-card");
+    let index = 0;
+
+    document.getElementById("next").addEventListener("click", function () {
+        index = (index + 1) % certificates.length;
+        updateCertificates();
+    });
+
+    document.getElementById("prev").addEventListener("click", function () {
+        index = (index - 1 + certificates.length) % certificates.length;
+        updateCertificates();
+    });
+
+    function updateCertificates() {
+        certificates.forEach((cert, i) => {
+            cert.style.display = i === index ? "block" : "none";
+        });
+    }
+
+    updateCertificates();
+});
+</script>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">My Skills</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Centered Frame for Certificates -->
+        <div class="col-md-9 main d-flex justify-content-center align-items-center">
+            <div class="frame" style="left: 100px;">
+                <h1 class="achievements-title">My Achievements & Certifications</h1>
+                <p class="hover-text" data-text="Hover to Reveal!">Hover over to unlock the secrets behind my achievements!</p>
+
+
+
+                <div class="certificates-container">
+                    <!-- Certificate 1 -->
+                    <div class="certificate-card active">
+                        <div class="certificate-inner">
+                            <div class="certificate-front">
+                                <img src="google_jam.png" alt="Google Gen AI Study Jam 2024">
+                                <div class="certificate-title">Google Gen AI Study Jam 2024</div>
+                            </div>
+                            <div class="certificate-back">
+                                <div class="certificate-description">
+                                    A certificate for participating in the Google Gen AI Study Jam 2024, where I learned advanced concepts of Artificial Intelligence and Generative AI.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="certificate-card">
+                        <div class="certificate-inner">
+                            <div class="certificate-front">
+                                <img src="ai.png" alt="AI Essentials (Udemy)">
+                                <div class="certificate-title">AI Essentials (Udemy)</div>
+                            </div>
+                            <div class="certificate-back">
+                                <div class="certificate-description">
+                                    This certificate acknowledges completion of the AI Essentials course on Udemy, where I acquired foundational knowledge of Artificial Intelligence.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3 -->
+                    <div class="certificate-card">
+                        <div class="certificate-inner">
+                            <div class="certificate-front">
+                                <img src="udemy wordpress.jpg" alt="WordPress Website Developer (Udemy)">
+                                <div class="certificate-title">WordPress Website Developer</div>
+                            </div>
+                            <div class="certificate-back">
+                                <div class="certificate-description">
+                                    Earned a certificate for mastering WordPress development through a comprehensive Udemy course, enabling me to build fully functional websites.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4 -->
+                    <div class="certificate-card">
+                        <div class="certificate-inner">
+                            <div class="certificate-front">
+                                <img src="web.png" alt="Website Development Tutorial">
+                                <div class="certificate-title">Website Development Tutorial (Infosys)</div>
+                            </div>
+                            <div class="certificate-back">
+                                <div class="certificate-description">
+                                    Completed the Website Development Tutorial by Infosys, gaining hands-on experience in building dynamic and responsive websites.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div id="prev" class="nav-arrow">▲</div>
+                    <div id="next" class="nav-arrow">▼</div>
+                </div>
+            </div>
+        </div> <!-- Main Content Ends -->
+    </div> <!-- Container Ends -->
+</body>
+
+</html>
